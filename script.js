@@ -12,11 +12,15 @@ function addMessage() {
     const container = document.createElement("div");
     container.className = `status-container`;
     container.innerHTML = `
-        <div class="status-message ${status === "success" ? "green" : "red"}">${content}</div>
+        <div class="status-message ${status === "success" ? "green" : "red"}">${content} <button class="close-btn">X</button></div>
+                    
         <div class="progress-bar"><div class="progress-fill"></div></div>`;
-
+  const closeButton = container.querySelector(".close-btn");
+    closeButton.addEventListener("click", () => {
+        clearInterval(interval); 
+        container.remove(); 
+    });
     messages.appendChild(container);
-
     const progressFill = container.querySelector(".progress-fill");
     let progress = 0, isPaused = false;
 
