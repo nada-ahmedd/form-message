@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="form-container">
+    <input id="content" placeholder="Enter your content" />
+    <select id="status">
+        <option value="success">Success</option>
+        <option value="field">Fail</option>
+    </select>
+    <button onclick="addMessage()">Show Message</button>
+</div>
+    <div id="error-message" class="error-message"></div>
+
+<div id="messages"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
